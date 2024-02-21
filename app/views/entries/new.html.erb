@@ -1,26 +1,20 @@
 <h1>Add New Entry</h1>
 
-<%= form_with(model: [ @place, @entry ], local: true) do |form| %>
-  <div>
-    <%= form.label :title %>
-    <%= form.text_field :title %>
-  </div>
-    <br> <!-- Space -->
-  <div>
-    <%= form.label :description %>
-    <%= form.text_area :description %>
-  </div>
-    <br> <!-- Space -->
-  <div>
-    <%= form.label :posted_on %>
-    <%= form.date_field :posted_on %>
-  </div>
-    <br> <!-- Space -->
-  <div>
-    <%= form.submit %>
-  </div>
-<% end %>
+<form action="/entries" method="post">
+  <p>
+    <label for="title">Title</label>
+    <input type="text" name="title">
+  </p>
 
-  <br> <!-- Space -->
+  <p>
+    <label for="description">Description</label>
+    <input type="text" name="description">
+  </p>
 
-<%= link_to 'Back', place_entries_path(@place) %>
+  <p>
+    <label for="date">date</label>
+    <input type="date" name="description">
+  </p>
+
+  <button>Submit</button>
+</form>
