@@ -12,9 +12,9 @@ class EntriesController < ApplicationController
   def create
     @entry = Entry.new
 
-    @entry["Title"] = params["Title"]
-    @entry["Description"] = params["Description"]
-    @entry["Date"] = params["Date"]
+    @entry["title"] = params["title"]
+    @entry["description"] = params["description"]
+    @entry["date"] = params["date"]
 
     @entry["place_id"] = params["place_id"]
 
